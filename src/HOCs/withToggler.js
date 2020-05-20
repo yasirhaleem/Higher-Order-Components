@@ -4,7 +4,7 @@ import React, { Component } from "react"
 // and "supercharging" it by giving it some extra abilities
 class Toggler extends Component {
     state = {
-        on: false
+        on: this.props.defaultOnValue
     }
 
     toggle = () => {
@@ -21,7 +21,7 @@ class Toggler extends Component {
         )
     }
 }
-export function withToggler(component) {
+export function withToggler(component, optionsObj) {
     return function(props) {
         console.log(props)
         return (
@@ -36,7 +36,7 @@ export function withToggler(component) {
                     <li>so in react we pass common component to higher order function and in return we get a new component</li>
                     <li>You will see all text and list above TWO TIMES because we are using this higher order function twice</li>
                 </ul>
-                <Toggler component={component} {...props}/>
+                <Toggler component={component} defaultOnValue={optionsObj.defaultOnValue} {...props}/>
             </div>
         )
     }

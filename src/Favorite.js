@@ -15,5 +15,5 @@ class Favorite extends Component{
         )
     }
 }
-const superchargedFavoriteComponent = withToggler(Favorite)
+const superchargedFavoriteComponent = withToggler(Favorite, {defaultOnValue: false})
 export default superchargedFavoriteComponent

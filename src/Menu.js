@@ -21,5 +21,5 @@ class Menu extends Component{
     }
 
 }
-const superchargedFavoriteComponent = withToggler(Menu)
+const superchargedFavoriteComponent = withToggler(Menu, {defaultOnValue: true})
 export default superchargedFavoriteComponent
